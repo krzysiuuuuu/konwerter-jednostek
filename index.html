@@ -12,10 +12,10 @@
     <center><h1>Przeliczanie jednostek</h1></center>
     <script>
         const jednostka = prompt('Na jaką jednostkę chcesz przeliczyć? (mile/km): ');    
-        const ilosc = Number(prompt('Wprowadź ilość przeliczanych mili/km: '));
+        let ilosc = Number(prompt('Wprowadź ilość przeliczanych mili/km: '));
         
         while (isNaN(ilosc)) {
-            const ilosc = Number(prompt('Wprowadź ilość przeliczanych mile/km: '));
+            ilosc = Number(prompt('Wprowadź ilość przeliczanych mile/km: '));
             if(!isNaN(ilosc)){
                 break
             }
