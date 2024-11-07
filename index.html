@@ -10,7 +10,7 @@
 </head>
 <body>
     <script>
-        const jednostka = prompt('Z jakiej jednostki chcesz przeliczyć? (mile/km): ');    
+        const jednostka = prompt('Na jaką jednostkę chcesz przeliczyć? (mile/km): ');    
         const ilosc = Number(prompt('Wprowadź ilość przeliczanych mili/km: '));
         
         while (isNaN(ilosc)) {
@@ -21,13 +21,14 @@
         }
         switch (jednostka) {
             case 'km':
-                document.write('Wynik: ')
+                document.write('<center>', ilosc, ' mil to ', (ilosc * 1.61), ' kilometrów ' '</center>')
                 break;
             case 'mile':
-                document.write('Wynik: ' (ilosc * 1.61))
+                document.write('<center>', ilosc, ' kilometrów to ', (ilosc / 1.61), ' mil' '</center>')
                 break;
         
             default:
+                document.write('<center>', jednostka, 'to nieprawidłowa jednostka', '<center>')
                 break;
         }
         
